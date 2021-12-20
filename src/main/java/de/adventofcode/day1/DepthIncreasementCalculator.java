@@ -1,4 +1,4 @@
-package de.adventofcode;
+package de.adventofcode.day1;
 
 public class DepthIncreasementCalculator {
 

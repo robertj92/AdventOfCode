@@ -1,4 +1,4 @@
-package de.adventofcode;
+package de.adventofcode.day1;
 
 import org.junit.jupiter.api.Test;
 
