@@ -10,7 +10,7 @@ class IntegerFileReaderTest {
 
     @Test
     void testReadIntegersFromFile_withOneValue() throws FileNotFoundException {
-        final String fileName = "input_one_element.txt";
+        final String fileName = "day1/input_one_element.txt";
         final int[] elements = IntegerFileReader.readIntegersFromFile(fileName);
 
         assertEquals(1, elements.length);
@@ -28,7 +28,7 @@ class IntegerFileReaderTest {
 
     @Test
     void testReadIntegersFromFile_withThreeInputValues() throws FileNotFoundException {
-        final String fileName = "input_small.txt";
+        final String fileName = "day1/input_small.txt";
         final int[] elements = IntegerFileReader.readIntegersFromFile(fileName);
 
         assertEquals(3, elements.length);

@@ -2,6 +2,7 @@ package de.adventofcode.day1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -21,9 +22,14 @@ public class IntegerFileReader {
         return convertIntegerListToArray(elements);
     }
 
-    private static File readFileFromResources(final String fileName) {
+    private static File readFileFromResources(final String fileName) throws FileNotFoundException {
         final ClassLoader classLoader = IntegerFileReader.class.getClassLoader();
-        return new File(Objects.requireNonNull(classLoader.getResource(fileName)).getFile());
+        final var resource = classLoader.getResource(fileName);
+
+        if (resource == null)
+            throw new FileNotFoundException();
+
+        return new File(resource.getFile());
     }
 
     private static int[] convertIntegerListToArray(final List<Integer> elements) {

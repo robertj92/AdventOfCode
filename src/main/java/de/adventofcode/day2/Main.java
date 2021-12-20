@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) throws URISyntaxException, IOException {
         final Submarine submarine = new Submarine();
-        final List<Movement> movements = SubmarineMovementFileReader.readMovementsFromFile("submarine_input.txt");
+        final List<Movement> movements = SubmarineMovementFileReader.readMovementsFromFile("day2/submarine_input.txt");
         movements.forEach(submarine::move);
         System.out.println("Total Movement is " + submarine.getTotalMovement());
     }

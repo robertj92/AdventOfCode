@@ -41,7 +41,7 @@ public class DepthIncreasementCalculatorTest {
 
     @Test
     void depthMeasurements_withInputSourceFromAdventOfCode() throws FileNotFoundException {
-        int[] depthMeasurements = IntegerFileReader.readIntegersFromFile("input.txt");
+        int[] depthMeasurements = IntegerFileReader.readIntegersFromFile("day1/input.txt");
 
         assertEquals(1548, depthIncreasementCalculator.countDepthIncreasements(depthMeasurements));
     }
@@ -62,7 +62,7 @@ public class DepthIncreasementCalculatorTest {
 
     @Test
     void depthMeasurementsWithThreeMeasurementSlidingWindows_withInputSourceFromAdventOfCode() throws FileNotFoundException {
-        int[] depthMeasurements = IntegerFileReader.readIntegersFromFile("input.txt");
+        int[] depthMeasurements = IntegerFileReader.readIntegersFromFile("day1/input.txt");
 
         assertEquals(1589, depthIncreasementCalculator.countDepthIncreasements(depthMeasurements, 3));
     }

@@ -12,7 +12,7 @@ public class SubmarineMovementFileReaderTest {
 
     @Test
     void testReadMovementsFromFile_shouldMatchMovementsInFile() throws URISyntaxException, IOException {
-        final List<Movement> movements = SubmarineMovementFileReader.readMovementsFromFile("submarine_input_example.txt");
+        final List<Movement> movements = SubmarineMovementFileReader.readMovementsFromFile("day2/submarine_input_example.txt");
 
         assertEquals(6, movements.size());
         assertEquals(new Movement(Direction.FORWARD, 5), movements.get(0));
